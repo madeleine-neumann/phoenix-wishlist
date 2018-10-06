@@ -1,0 +1,10 @@
+<div class="footer">
+  <div class="container">
+    <div class="footer__imprint">
+      <a href="http://9elements.com/imprint" class="footer__imprint--link">Imprint</a>
+      <span class="footer__imprint--link"> | </span>
+      <a href="https://ruhrjs.de/datenschutz" class="footer__imprint--link">Privacy</a>
+
+    </div>
+  </div>
+</div>
