@@ -1,14 +1,15 @@
 * { Box-sizing: border-box }
-html body {
+
+body {
   font-family: 'Mali', cursive;
-  margin: 0;
-  padding: 0;
-  // color: white;
+  background-color: black;
+
 }
 
 .headline {
   &__big {
-    font-size: 30px;
+    font-size: 2rem;
+    margin-bottom: 50px;
   }
 }
 

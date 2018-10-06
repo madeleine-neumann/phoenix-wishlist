@@ -1,0 +1,15 @@
+.button {
+  display: block;
+  padding: 10px;
+  margin-bottom: 25px;
+  width: 100%;
+  border-radius: 5px;
+  text-align: center;
+
+  &__add-new {
+    background-color: #04fad9;
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+  }
+}
