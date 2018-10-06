@@ -6,6 +6,9 @@
       <th>Band</th>
       <th>Title</th>
       <th>Performer name</th>
+      <th>Archived</th>
+
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -14,6 +17,13 @@
       <td><%= song.band %></td>
       <td><%= song.title %></td>
       <td><%= song.performer_name %></td>
+      <td><%= song.archived %></td>
+
+      <td>
+        <%= link "Show", to: Routes.song_path(@conn, :show, song) %>
+        <%= link "Edit", to: Routes.song_path(@conn, :edit, song) %>
+        <%= link "Delete", to: Routes.song_path(@conn, :delete, song), method: :delete, data: [confirm: "Are you sure?"] %>
+      </td>
     </tr>
 <% end %>
   </tbody>

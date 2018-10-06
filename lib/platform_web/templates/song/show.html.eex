@@ -1,0 +1,28 @@
+<h1>Show Song</h1>
+
+<ul>
+
+  <li>
+    <strong>Band:</strong>
+    <%= @song.band %>
+  </li>
+
+  <li>
+    <strong>Title:</strong>
+    <%= @song.title %>
+  </li>
+
+  <li>
+    <strong>Performer name:</strong>
+    <%= @song.performer_name %>
+  </li>
+
+  <li>
+    <strong>Archived:</strong>
+    <%= @song.archived %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.song_path(@conn, :edit, @song) %></span>
+<span><%= link "Back", to: Routes.song_path(@conn, :index) %></span>

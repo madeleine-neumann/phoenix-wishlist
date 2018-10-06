@@ -1,20 +1,17 @@
-# Platform
+# Wishlist Phoenix
 
-To start your Phoenix server:
+## Was wir brauchen
+* Landingpage, kurze Infos, Button mit "Lied hinzufügen"
+* Seite für den DJ um Lieder zu "archivieren" bzw. löschen
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
-  * Install Node.js dependencies with `cd assets && npm install`
-  * Start Phoenix endpoint with `mix phx.server`
+# Tabellen
+Songs
+* Band - String
+* Title - Sting
+* Performer Name - String
+* archived - boolean
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+mix phx.gen.html Core Song songs band:string title:string performer_name:string archived:boolean
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
 
-## Learn more
-
-  * Official website: http://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+Reihenfolge errechnen anhand von Songlänge - Zeitanzeigen
