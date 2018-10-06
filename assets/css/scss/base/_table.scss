@@ -25,6 +25,13 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 
+  &__tr-admin {
+    display: grid;
+    border-bottom: 1px solid white;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
   &__row {
     padding: 10px 0
   }

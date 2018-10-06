@@ -19,7 +19,6 @@
 // defining Columns
 [class*="col-"] {
 	padding: 0 ($grid-gutter-width/2);
-  border: 1px solid black;
 }
 
 @for $i from 1 through $grid-columns {
