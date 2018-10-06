@@ -1,9 +1,13 @@
 .form {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   margin-bottom: 20px;
   margin-top: 20px;
   grid-column-gap: 10px;
+
+  @include medium {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 
   input:focus {
     outline:0;
@@ -20,6 +24,7 @@
     border-color: initial;
     border-image: initial;
     font-size: 20px;
+    margin-bottom: 20px;
 
     &:focus {
 
