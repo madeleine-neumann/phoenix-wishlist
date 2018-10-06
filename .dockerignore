@@ -1,0 +1,26 @@
+# .dockerignore
+.git
+.elixir_ls
+.vscode
+.DS_Store
+cloudbuild.yaml
+Dockerfile
+log.txt
+cover
+doc
+platform-*.tar
+docker-compose.yml
+README.md
+
+# Mix artifacts
+_build
+deps
+*.ez
+
+# Generate on crash by the VM
+erl_crash.dump
+
+# Static artifacts
+assets/node_modules
+assets/npm-debug.log
+priv/static

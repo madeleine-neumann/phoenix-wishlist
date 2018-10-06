@@ -1,0 +1,18 @@
+steps:
+# Load images for cachig
+# - name: 'gcr.io/cloud-builders/docker'
+#   args: [ 'pull', 'eu.gcr.io/$PROJECT_ID/ruhrjs-karaoke:latest' ]
+# Build production image
+- name: 'gcr.io/cloud-builders/docker'
+  args: [
+    'build',
+    '--cache-from', 'eu.gcr.io/$PROJECT_ID/ruhrjs-karaoke:latest',
+    '-t', 'eu.gcr.io/$PROJECT_ID/ruhrjs-karaoke:latest',
+    '-t', 'eu.gcr.io/$PROJECT_ID/ruhrjs-karaoke:$COMMIT_SHA',
+    '.' ]
+# publish following images
+images:
+- 'eu.gcr.io/$PROJECT_ID/ruhrjs-karaoke:latest'
+- 'eu.gcr.io/$PROJECT_ID/ruhrjs-karaoke:$COMMIT_SHA'
+# Timeout 30min (Default 10min)
+timeout: 1800s
