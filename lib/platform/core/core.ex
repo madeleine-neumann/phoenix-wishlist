@@ -27,7 +27,7 @@ defmodule Platform.Core do
   def list_archived_songs do
     Song
     |> where(archived: true)
-    |> order_by(asc: :inserted_at)
+    |> order_by(desc: :band)
     |> Repo.all()
   end
 
