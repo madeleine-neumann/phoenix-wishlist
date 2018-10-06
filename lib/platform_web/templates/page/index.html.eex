@@ -10,11 +10,7 @@
   </thead>
   <tbody data-songlist>
     <%= for song <- @songs do %>
-        <tr>
-          <td><%= song.band %></td>
-          <td><%= song.title %></td>
-          <td><%= song.performer_name %></td>
-        </tr>
+      <%= render("_song.html", song: song) %>
     <% end %>
   </tbody>
 </table>
