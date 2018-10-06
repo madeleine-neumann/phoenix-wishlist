@@ -28,17 +28,6 @@ defmodule PlatformWeb.SongController do
     end
   end
 
-  def show(conn, %{"id" => id}) do
-    song = Core.get_song!(id)
-    render(conn, "show.html", song: song)
-  end
-
-  def edit(conn, %{"id" => id}) do
-    song = Core.get_song!(id)
-    changeset = Core.change_song(song)
-    render(conn, "edit.html", song: song, changeset: changeset)
-  end
-
   def update(conn, %{"id" => id, "song" => song_params}) do
     song = Core.get_song!(id)
 
