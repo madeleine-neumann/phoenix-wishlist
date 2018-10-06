@@ -68,8 +68,8 @@ config :phoenix, :plug_init_mode, :runtime
 
 # Configure your database
 config :platform, Platform.Repo,
-  username: "postgres",
-  password: "postgres",
-  database: "platform_dev",
+  username: "madeleine",
+  password: "",
+  database: "wishlist_phoenix_dev",
   hostname: "localhost",
   pool_size: 10
