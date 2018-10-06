@@ -1,5 +1,6 @@
 defmodule PlatformWeb.SongController do
   use PlatformWeb, :controller
+  plug PlatformWeb.BasicAuth, [username: "user", password: "secret"] when not action in [:new, :create]
 
   alias Platform.Core
   alias Platform.Core.Song
@@ -17,10 +18,10 @@ defmodule PlatformWeb.SongController do
 
   def create(conn, %{"song" => song_params}) do
     case Core.create_song(song_params) do
-      {:ok, song} ->
+      {:ok, _song} ->
         conn
         |> put_flash(:info, "Song created successfully.")
-        |> redirect(to: Routes.song_path(conn, :show, song))
+        |> redirect(to: Routes.page_path(conn, :index))
 
       {:error, %Ecto.Changeset{} = changeset} ->
         render(conn, "new.html", changeset: changeset)

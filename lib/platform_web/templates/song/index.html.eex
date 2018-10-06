@@ -1,18 +1,9 @@
 <h1>Listing Songs</h1>
 
-<div class="row">
-  <div class="col-md-6">
+<div class="grid-content">
+  <div class="col-lg-6 col-xs-12">
+  <h2>Current Songs</h2>
     <table>
-      <thead>
-        <tr>
-          <th>Band</th>
-          <th>Title</th>
-          <th>Performer name</th>
-          <th>Archived</th>
-
-          <th></th>
-        </tr>
-      </thead>
       <tbody>
         <%= for song <- @next_songs do %>
             <tr>
@@ -29,18 +20,9 @@
       </tbody>
     </table>
   </div>
-  <div class="col-md-6">
-
+  <div class="col-lg-6 col-xs-12">
+    <h2>Archive</h2>
     <table>
-      <thead>
-        <tr>
-          <th>Band</th>
-          <th>Title</th>
-          <th>Performer name</th>
-          <th>Archived</th>
-          <th></th>
-        </tr>
-      </thead>
       <tbody>
         <%= for song <- @archived_songs do %>
             <tr>
