@@ -23,6 +23,7 @@
     border-bottom: 1px solid white;
     width: 100%;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
   }
 
   &__tr-admin {
@@ -30,6 +31,7 @@
     border-bottom: 1px solid white;
     width: 100%;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
   }
 
   &__row {
