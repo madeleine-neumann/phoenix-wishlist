@@ -18,7 +18,9 @@ defmodule PlatformWeb.SongController do
 
   def create(conn, %{"song" => song_params}) do
     case Core.create_song(song_params) do
-      {:ok, _song} ->
+      {:ok, song} ->
+        PlatformWeb.Endpoint.broadcast! "song:lobby", "new_song", %{title: song.title, band: song.band, performer_name: song.performer_name}
+
         conn
         |> put_flash(:info, "Song created successfully.")
         |> redirect(to: Routes.page_path(conn, :index))

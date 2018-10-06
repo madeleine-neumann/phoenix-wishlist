@@ -2,20 +2,20 @@
 
 <table>
   <thead>
-    <tr>
+    <tr >
       <th>Band</th>
       <th>Title</th>
       <th>Performer name</th>
     </tr>
   </thead>
-  <tbody>
-<%= for song <- @songs do %>
-    <tr>
-      <td><%= song.band %></td>
-      <td><%= song.title %></td>
-      <td><%= song.performer_name %></td>
-    </tr>
-<% end %>
+  <tbody data-songlist>
+    <%= for song <- @songs do %>
+        <tr>
+          <td><%= song.band %></td>
+          <td><%= song.title %></td>
+          <td><%= song.performer_name %></td>
+        </tr>
+    <% end %>
   </tbody>
 </table>
 
