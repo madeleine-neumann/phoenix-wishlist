@@ -6,15 +6,7 @@
     <table>
       <tbody>
         <%= for song <- @next_songs do %>
-            <tr>
-              <td><%= song.band %></td>
-              <td><%= song.title %></td>
-              <td><%= song.performer_name %></td>
-              <td><%= song.archived %></td>
-              <td>
-                <%= link "Archive", to: Routes.song_path(@conn, :delete, song), method: :delete, data: [confirm: "Are you sure?"] %>
-              </td>
-            </tr>
+          <%= render("_song.html", conn: @conn, song: song) %>
         <% end %>
       </tbody>
     </table>

@@ -19,7 +19,8 @@ defmodule PlatformWeb.SongController do
   def create(conn, %{"song" => song_params}) do
     case Core.create_song(song_params) do
       {:ok, song} ->
-        PlatformWeb.Endpoint.broadcast! "song:lobby", "new_song", %{title: song.title, band: song.band, performer_name: song.performer_name}
+        template = Phoenix.View.render_to_string(PlatformWeb.PageView, "_song.html", song: song)
+        PlatformWeb.Endpoint.broadcast! "song:lobby", "new_song", %{template: template}
 
         conn
         |> put_flash(:info, "Song created successfully.")
