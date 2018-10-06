@@ -1,32 +1,58 @@
 <h1>Listing Songs</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Band</th>
-      <th>Title</th>
-      <th>Performer name</th>
-      <th>Archived</th>
+<div class="row">
+  <div class="col-md-6">
+    <table>
+      <thead>
+        <tr>
+          <th>Band</th>
+          <th>Title</th>
+          <th>Performer name</th>
+          <th>Archived</th>
 
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-<%= for song <- @songs do %>
-    <tr>
-      <td><%= song.band %></td>
-      <td><%= song.title %></td>
-      <td><%= song.performer_name %></td>
-      <td><%= song.archived %></td>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= for song <- @next_songs do %>
+            <tr>
+              <td><%= song.band %></td>
+              <td><%= song.title %></td>
+              <td><%= song.performer_name %></td>
+              <td><%= song.archived %></td>
 
-      <td>
-        <%= link "Show", to: Routes.song_path(@conn, :show, song) %>
-        <%= link "Edit", to: Routes.song_path(@conn, :edit, song) %>
-        <%= link "Delete", to: Routes.song_path(@conn, :delete, song), method: :delete, data: [confirm: "Are you sure?"] %>
-      </td>
-    </tr>
-<% end %>
-  </tbody>
-</table>
+              <td>
+                <%= link "Archive", to: Routes.song_path(@conn, :delete, song), method: :delete, data: [confirm: "Are you sure?"] %>
+              </td>
+            </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-6">
+
+    <table>
+      <thead>
+        <tr>
+          <th>Band</th>
+          <th>Title</th>
+          <th>Performer name</th>
+          <th>Archived</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= for song <- @archived_songs do %>
+            <tr>
+              <td><%= song.band %></td>
+              <td><%= song.title %></td>
+              <td><%= song.performer_name %></td>
+              <td><%= song.archived %></td>
+            </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
 
 <span><%= link "New Song", to: Routes.song_path(@conn, :new) %></span>

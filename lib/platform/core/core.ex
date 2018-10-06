@@ -18,13 +18,29 @@ defmodule Platform.Core do
 
   """
   def list_songs do
-    Repo.all(Song)
+    Song
+    |> order_by(asc: :inserted_at)
+    |> Repo.all()
   end
 
-  def list_songs_excluded_archived do
+  def list_next_songs do
     Song
     |> where(archived: false)
+    |> order_by(asc: :inserted_at)
     |> Repo.all()
+  end
+
+  def list_archived_songs do
+    Song
+    |> where(archived: true)
+    |> order_by(asc: :inserted_at)
+    |> Repo.all()
+  end
+
+  def archive_song(%Song{} = song) do
+    song
+    |> Song.changeset(%{archived: true})
+    |> Repo.update()
   end
 
   @doc """

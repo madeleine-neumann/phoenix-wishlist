@@ -5,8 +5,9 @@ defmodule PlatformWeb.SongController do
   alias Platform.Core.Song
 
   def index(conn, _params) do
-    songs = Core.list_songs()
-    render(conn, "index.html", songs: songs)
+    next_songs = Core.list_next_songs()
+    archived_songs = Core. list_archived_songs()
+    render(conn, "index.html", next_songs: next_songs, archived_songs: archived_songs )
   end
 
   def new(conn, _params) do
@@ -53,10 +54,10 @@ defmodule PlatformWeb.SongController do
 
   def delete(conn, %{"id" => id}) do
     song = Core.get_song!(id)
-    {:ok, _song} = Core.delete_song(song)
+    {:ok, _song} = Core.archive_song(song)
 
     conn
-    |> put_flash(:info, "Song deleted successfully.")
+    |> put_flash(:info, "Song archived successfully.")
     |> redirect(to: Routes.song_path(conn, :index))
   end
 end
