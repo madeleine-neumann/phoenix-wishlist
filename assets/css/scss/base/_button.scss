@@ -1,12 +1,13 @@
 .button {
+  border: none;
   display: block;
   padding: 10px;
   margin-bottom: 25px;
-  width: 100%;
   border-radius: 5px;
   text-align: center;
 
   &__archive {
+    width: 100%;
     display: inline-block;
     padding: 5px;
     background-color: #fa0404da;
@@ -16,9 +17,18 @@
   }
 
   &__add-new {
+    width: 100%;
     background-color: #04fad9;
     color: white;
     text-decoration: none;
     font-size: 2rem;
+  }
+
+  &__back {
+    width: 200px;
+    background-color: #fad504;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
   }
 }

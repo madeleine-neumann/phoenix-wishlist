@@ -5,7 +5,7 @@
     <tr class="table__tr-index">
       <th>Band</th>
       <th>Title</th>
-      <th>Performer name</th>
+      <th>Performer</th>
     </tr>
   </thead>
   <tbody data-songlist>

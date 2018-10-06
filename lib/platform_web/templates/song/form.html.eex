@@ -5,19 +5,14 @@
     </div>
   <% end %>
 
-  <%= label f, :band %>
-  <%= text_input f, :band %>
-  <%= error_tag f, :band %>
+  <div class="form">
+    <%= text_input f, :performer_name, placeholder: "Your Name" %>
+    <%= text_input f, :band, placeholder: "Band Name" %>
+    <%= text_input f, :title, placeholder: "Song Title" %>
+  </div>
 
-  <%= label f, :title %>
-  <%= text_input f, :title %>
-  <%= error_tag f, :title %>
-
-  <%= label f, :performer_name %>
-  <%= text_input f, :performer_name %>
-  <%= error_tag f, :performer_name %>
 
   <div>
-    <%= submit "Save" %>
+    <%= submit "Save", class: "button button__add-new" %>
   </div>
 <% end %>
