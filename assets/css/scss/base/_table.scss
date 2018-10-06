@@ -1,0 +1,31 @@
+.table {
+  width: 100%;
+  display: block;
+
+  thead {
+    width: 100%;
+    display: block;
+  }
+
+  tbody {
+    width: 100%;
+    display: block;
+  }
+
+  th {
+    text-align: left;
+    font-size: 1.3rem;
+    padding: 5px 0;
+  }
+
+  &__tr-index {
+    display: grid;
+    border-bottom: 1px solid white;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  &__row {
+    padding: 10px 0
+  }
+}

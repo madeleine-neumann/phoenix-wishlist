@@ -1,0 +1,16 @@
+* { Box-sizing: border-box }
+
+body {
+  font-family: 'Mali', cursive;
+  background-color: black;
+
+}
+
+.headline {
+  &__big {
+    font-size: 2rem;
+    margin-bottom: 50px;
+  }
+}
+
+

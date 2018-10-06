@@ -3,7 +3,7 @@
 <div class="grid-content">
   <div class="col-lg-6 col-xs-12">
   <h2>Current Songs</h2>
-    <table>
+    <table class="table">
       <tbody>
         <%= for song <- @next_songs do %>
           <%= render("_song.html", conn: @conn, song: song) %>
@@ -13,7 +13,7 @@
   </div>
   <div class="col-lg-6 col-xs-12">
     <h2>Archive</h2>
-    <table>
+    <table class="table">
       <tbody>
         <%= for song <- @archived_songs do %>
             <tr>
@@ -28,4 +28,4 @@
   </div>
 </div>
 
-<span><%= link "New Song", to: Routes.song_path(@conn, :new) %></span>
+<%= link "New Song", to: Routes.song_path(@conn, :new), class: "button button__add-new" %>

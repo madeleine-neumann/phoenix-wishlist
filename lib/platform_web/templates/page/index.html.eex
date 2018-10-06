@@ -1,8 +1,8 @@
-<h1>Listing Songs</h1>
-
-<table>
+<h1 class="headline__big">Pottpourri Songlist</h1>
+<%= link "New Song", to: Routes.song_path(@conn, :new), class: "button button__add-new" %>
+<table class="table">
   <thead>
-    <tr >
+    <tr class="table__tr-index">
       <th>Band</th>
       <th>Title</th>
       <th>Performer name</th>
@@ -15,4 +15,4 @@
   </tbody>
 </table>
 
-<span><%= link "New Song", to: Routes.song_path(@conn, :new) %></span>
+
