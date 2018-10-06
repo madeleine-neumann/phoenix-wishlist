@@ -11,8 +11,8 @@ config :logger, level: :warn
 
 # Configure your database
 config :platform, Platform.Repo,
-  username: "postgres",
-  password: "postgres",
-  database: "platform_test",
+  username: System.get_env("USER"),
+  password: "",
+  database: "ruhrjs_wishlist_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox

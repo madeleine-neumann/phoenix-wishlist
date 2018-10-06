@@ -60,8 +60,8 @@ config :phoenix, :plug_init_mode, :runtime
 
 # Configure your database
 config :platform, Platform.Repo,
-  username: "madeleine",
+  username: System.get_env("USER"),
   password: "",
-  database: "wishlist_phoenix_dev",
+  database: "ruhrjs_wishlist_dev",
   hostname: "localhost",
   pool_size: 10
