@@ -18,7 +18,7 @@ config :platform, PlatformWeb.Endpoint,
     port: 443
   ],
   server: true,
-  # force_ssl: [rewrite_on: [:x_forwarded_proto]],
+  force_ssl: [rewrite_on: [:x_forwarded_proto], exclude: ["localhost", System.get_env("IP_ADDRESS")]],
   secret_key_base: System.get_env("SECRET_KEY_BASE") || Logger.info("Please set env variable SECRET_KEY_BASE"),
   cache_static_manifest: "priv/static/cache_manifest.json"
 
