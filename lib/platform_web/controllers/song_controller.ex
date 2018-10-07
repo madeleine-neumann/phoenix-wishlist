@@ -45,6 +45,15 @@ defmodule PlatformWeb.SongController do
     end
   end
 
+  def delete(conn, %{"id" => id, "force" => "true"}) do
+    song = Core.get_song!(id)
+    {:ok, _song} = Core.delete_song(song)
+
+    conn
+    |> put_flash(:info, "Song deleted successfully.")
+    |> redirect(to: Routes.song_path(conn, :index))
+  end
+
   def delete(conn, %{"id" => id}) do
     song = Core.get_song!(id)
     {:ok, _song} = Core.archive_song(song)

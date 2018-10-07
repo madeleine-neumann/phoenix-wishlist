@@ -34,6 +34,7 @@
               <td><%= song.band %></td>
               <td><%= song.title %></td>
               <td><%= song.performer_name %></td>
+              <td><%= link "Delete", to: Routes.song_path(@conn, :delete, song, force: true), class: "button button__archive", method: :delete, data: [confirm: "Are you sure?"] %></td>
             </tr>
         <% end %>
       </tbody>
