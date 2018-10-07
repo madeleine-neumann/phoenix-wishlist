@@ -18,6 +18,11 @@
     padding: 5px 0;
   }
 
+  td {
+    word-break: break-all;
+    hyphens: auto;
+  }
+
   &__tr-index {
     display: grid;
     border-bottom: 1px solid white;
