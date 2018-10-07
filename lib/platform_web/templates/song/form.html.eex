@@ -6,9 +6,18 @@
   <% end %>
 
   <div class="form">
-    <%= text_input f, :performer_name, placeholder: "Your Name" %>
-    <%= text_input f, :band, placeholder: "Band Name" %>
-    <%= text_input f, :title, placeholder: "Song Title" %>
+    <p>
+      <%= text_input f, :performer_name, placeholder: "Your Name" %>
+      <%= error_tag f, :performer_name %>
+    </p>
+    <p>
+      <%= text_input f, :band, placeholder: "Band Name" %>
+      <%= error_tag f, :band %>
+    </p>
+    <p>
+      <%= text_input f, :title, placeholder: "Song Title" %>
+      <%= error_tag f, :title %>
+    </p>
   </div>
 
 
