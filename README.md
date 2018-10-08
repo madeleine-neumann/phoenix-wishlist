@@ -1,6 +1,6 @@
 # Karaoke Wishlist for RuhrJS 2018
 
-#License
+# MIT License
 Copyright (c) 2018 Madeleine Neumann
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
