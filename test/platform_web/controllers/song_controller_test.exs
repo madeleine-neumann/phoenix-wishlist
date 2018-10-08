@@ -75,6 +75,7 @@ defmodule PlatformWeb.SongControllerTest do
     test "deletes chosen song", %{conn: conn, song: song} do
       conn = delete(conn, Routes.song_path(conn, :delete, song))
       assert redirected_to(conn) == Routes.song_path(conn, :index)
+
       assert_error_sent 404, fn ->
         get(conn, Routes.song_path(conn, :show, song))
       end

@@ -7,14 +7,14 @@ defmodule PlatformWeb.BasicAuth do
   def call(conn, correct_auth) do
     case get_req_header(conn, "authorization") do
       ["Basic " <> attempted_auth] -> verify(conn, attempted_auth, correct_auth)
-      _                            -> unauthorized(conn)
+      _ -> unauthorized(conn)
     end
   end
 
-  defp verify(conn, attempted_auth, [username: username, password: password]) do
+  defp verify(conn, attempted_auth, username: username, password: password) do
     case encode(username, password) do
       ^attempted_auth -> conn
-      _               -> unauthorized(conn)
+      _ -> unauthorized(conn)
     end
   end
 

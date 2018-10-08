@@ -45,7 +45,6 @@ defmodule Platform.CoreTest do
       song = song_fixture()
       assert {:ok, %Song{} = song} = Core.update_song(song, @update_attrs)
 
-      
       assert song.archived == false
       assert song.band == "some updated band"
       assert song.performer_name == "some updated performer_name"

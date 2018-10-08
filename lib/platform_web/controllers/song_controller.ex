@@ -7,8 +7,8 @@ defmodule PlatformWeb.SongController do
 
   def index(conn, _params) do
     next_songs = Core.list_next_songs()
-    archived_songs = Core. list_archived_songs()
-    render(conn, "index.html", next_songs: next_songs, archived_songs: archived_songs )
+    archived_songs = Core.list_archived_songs()
+    render(conn, "index.html", next_songs: next_songs, archived_songs: archived_songs)
   end
 
   def new(conn, _params) do
@@ -20,7 +20,7 @@ defmodule PlatformWeb.SongController do
     case Core.create_song(song_params) do
       {:ok, song} ->
         template = Phoenix.View.render_to_string(PlatformWeb.PageView, "_song.html", song: song)
-        PlatformWeb.Endpoint.broadcast! "song:lobby", "new_song", %{template: template}
+        PlatformWeb.Endpoint.broadcast!("song:lobby", "new_song", %{template: template})
 
         conn
         |> put_flash(:info, "Song created successfully.")

@@ -7,7 +7,7 @@
         <tr class="table__tr-admin">
           <th>Band</th>
           <th>Title</th>
-          <th>Performer name</th>
+          <th>Performer</th>
           <th></th>
         </tr>
       </thead>
@@ -25,7 +25,8 @@
         <tr class="table__tr-index">
           <th>Band</th>
           <th>Title</th>
-          <th>Performer name</th>
+          <th>Performer</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
