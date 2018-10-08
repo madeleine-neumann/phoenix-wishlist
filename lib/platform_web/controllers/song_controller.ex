@@ -1,6 +1,6 @@
 defmodule PlatformWeb.SongController do
   use PlatformWeb, :controller
-  plug PlatformWeb.BasicAuth, [username: "user", password: "secret"] when not action in [:new, :create]
+  plug PlatformWeb.BasicAuth, [username: "user", password: "secret"] when action not in [:new, :create]
 
   alias Platform.Core
   alias Platform.Core.Song
