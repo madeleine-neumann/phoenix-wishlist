@@ -1,18 +1,21 @@
-<h1 class="headline__big">Pottpourri Songlist</h1>
-<%= link "New Song", to: Routes.song_path(@conn, :new), class: "button button__add-new" %>
-<table class="table">
-  <thead>
-    <tr class="table__tr-index">
-      <th>Band</th>
-      <th>Title</th>
-      <th>Performer</th>
-    </tr>
-  </thead>
-  <tbody data-songlist>
-    <%= for song <- @songs do %>
-      <%= render("_song.html", song: song) %>
-    <% end %>
-  </tbody>
-</table>
+<div class="container">
+  <header>
+    <img src="images/pottpourri.png" alt="Pottpourri Songlist">
+  </header>
+  <div class="content">
+    <div class="songlist">
+      <%= link "", to: Routes.song_path(@conn, :new), class: "btn" %>
+      <h2 class="songlist__headline"> Upcoming</h2>
+
+      <ol class="songlist__list">
+        <%= for song <- @songs do %>
+            <%= render("_song.html", song: song) %>
+        <% end %>
+      </ol>
+    </div>
+  </div>
+</div>
+
+
 
 

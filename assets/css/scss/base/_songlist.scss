@@ -1,0 +1,59 @@
+.songlist {
+  background: rgba(0,0,0,0.45);
+  padding: 2rem;
+  position: relative;
+  margin-top: 1.5rem;
+  border-radius: .3125rem;
+
+  &__headline {
+    font-size: 1.125rem;
+    line-height: 1;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 400;
+  }
+
+  &__list {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      font-style: italic;
+      font-weight: 400;
+      padding-bottom: 1em;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+      padding-left: 1.5em;
+      line-height: 1.4;
+      position: relative;
+
+      &:before {
+        counter-increment: list;
+        content: counter(list) ". ";
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-style: normal;
+        font-weight: 400;
+      }
+
+      & + li {
+        margin-top: 1em;
+      }
+    }
+
+    span {
+      font-weight: 400;
+      font-style: normal;
+    }
+  }
+
+  &__song {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__performance {
+    font-size: .875em;
+  }
+}
