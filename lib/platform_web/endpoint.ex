@@ -15,10 +15,6 @@ defmodule PlatformWeb.Endpoint do
     gzip: false,
     only: ~w(css fonts images js fonts favicon.ico robots.txt)
 
-  if Application.get_env(:platform, :force_ssl) do
-    plug Plug.SSL, rewrite_on: [:x_forwarded_proto]
-  end
-
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
   if code_reloading? do
