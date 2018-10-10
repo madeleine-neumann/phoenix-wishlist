@@ -1,27 +1,32 @@
-<%= form_for @changeset, @action, fn f -> %>
-  <%= if @changeset.action do %>
-    <div class="alert alert-danger">
-      <p>Oops, something went wrong! Please check the errors below.</p>
+<div class="container">
+  <h1 class="headline__big">Add new Song</h1>
+
+  <%= form_for @changeset, @action, fn f -> %>
+    <%= if @changeset.action do %>
+      <div class="alert alert-danger">
+        <p>Oops, something went wrong! Please check the errors below.</p>
+      </div>
+    <% end %>
+
+    <div class="form">
+      <p>
+        <%= text_input f, :performer_name, placeholder: "Your Name" %>
+        <%= error_tag f, :performer_name %>
+      </p>
+      <p>
+        <%= text_input f, :band, placeholder: "Band Name" %>
+        <%= error_tag f, :band %>
+      </p>
+      <p>
+        <%= text_input f, :title, placeholder: "Song Title" %>
+        <%= error_tag f, :title %>
+      </p>
+    </div>
+
+
+    <div>
+      <%= submit "Save", class: "button button__add-new" %>
     </div>
   <% end %>
+</div>
 
-  <div class="form">
-    <p>
-      <%= text_input f, :performer_name, placeholder: "Your Name" %>
-      <%= error_tag f, :performer_name %>
-    </p>
-    <p>
-      <%= text_input f, :band, placeholder: "Band Name" %>
-      <%= error_tag f, :band %>
-    </p>
-    <p>
-      <%= text_input f, :title, placeholder: "Song Title" %>
-      <%= error_tag f, :title %>
-    </p>
-  </div>
-
-
-  <div>
-    <%= submit "Save", class: "button button__add-new" %>
-  </div>
-<% end %>
