@@ -1,3 +1,8 @@
+form {
+  flex-grow: 1;
+  padding: 0 0.5rem
+}
+
 .form {
   display: grid;
   grid-template-columns: 1fr;
@@ -5,26 +10,22 @@
   margin-top: 20px;
   grid-column-gap: 10px;
 
-  @include medium {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
   input:focus {
     outline:0;
   }
 
   input {
     background-color: white;
-    padding: 10px;
-    height: 60px;
+    padding: 1rem;
+    height: 3.125rem;
     width: 100%;
     border-radius: 5px;
     border-width: 0;
     border-style: inset;
     border-color: initial;
     border-image: initial;
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
 
     &:focus {
 
@@ -38,12 +39,10 @@
     }
 
     &::placeholder {
-      font-size: 20px;
       color: grey;
     }
 
     &::-moz-placeholder {
-      font-size: 20px;
       color: grey;
     }
   }

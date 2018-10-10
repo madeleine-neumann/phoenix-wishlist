@@ -1,3 +1,2 @@
 <%= render "form.html", Map.put(assigns, :action, Routes.song_path(@conn, :create)) %>
 
-<span><%= link "Back", to: Routes.page_path(@conn, :index), class: "button button__back" %></span>

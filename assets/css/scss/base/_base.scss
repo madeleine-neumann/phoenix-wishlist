@@ -100,8 +100,10 @@ footer {
 
 .headline {
   &__big {
-    font-size: 2rem;
-    margin-bottom: 50px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 0.5em;
   }
 
   &__middle {

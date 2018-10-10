@@ -11,8 +11,8 @@
   <body>
     <main role="main">
       <%= render @view_module, @view_template, assigns %>
+      <%= render("_footer.html") %>
     </main>
-    <%= render("_footer.html") %>
     <script type="text/javascript" src="<%= Routes.static_url(@conn, "/js/app.js") %>"></script>
   </body>
 </html>
