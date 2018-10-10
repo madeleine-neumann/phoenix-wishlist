@@ -1,5 +1,5 @@
-<%= link "New Song", to: Routes.song_path(@conn, :new), class: "button button__add-new" %>
-<div class="grid-content">
+<div class="container">
+  <%= link "New Song", to: Routes.song_path(@conn, :new), class: "button button__add-new" %>
   <div class="col-lg-6 col-xs-12">
   <h2 class="headline__middle">Current Songs</h2>
     <table class="table">

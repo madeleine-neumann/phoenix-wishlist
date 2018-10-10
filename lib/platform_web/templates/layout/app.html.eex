@@ -9,11 +9,9 @@
     <link rel="stylesheet" href="<%= Routes.static_url(@conn, "/css/app.css") %>"/>
   </head>
   <body>
-    <header class="header">
-      <main role="main">
-        <%= render @view_module, @view_template, assigns %>
-      </main>
-    </header>
+    <main role="main">
+      <%= render @view_module, @view_template, assigns %>
+    </main>
     <%= render("_footer.html") %>
     <script type="text/javascript" src="<%= Routes.static_url(@conn, "/js/app.js") %>"></script>
   </body>
