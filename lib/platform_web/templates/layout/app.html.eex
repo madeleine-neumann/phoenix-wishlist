@@ -10,8 +10,10 @@
   </head>
   <body>
     <main role="main">
-      <%= render @view_module, @view_template, assigns %>
-      <%= render("_footer.html") %>
+      <div class="container">
+        <%= render @view_module, @view_template, assigns %>
+        <%= render("_footer.html") %>
+      </div>
     </main>
     <script type="text/javascript" src="<%= Routes.static_url(@conn, "/js/app.js") %>"></script>
   </body>

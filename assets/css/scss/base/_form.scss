@@ -16,6 +16,7 @@ form {
 
   input {
     background-color: white;
+    color: #333;
     padding: 1rem;
     height: 3.125rem;
     width: 100%;
@@ -39,11 +40,11 @@ form {
     }
 
     &::placeholder {
-      color: grey;
+      color: #333;
     }
 
     &::-moz-placeholder {
-      color: grey;
+      color: #333;
     }
   }
 }
