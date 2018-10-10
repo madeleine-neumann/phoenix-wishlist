@@ -31,13 +31,21 @@
       &::placeholder {
         color: transparent;
       }
+
+      &::-moz-placeholder {
+        color: transparent;
+      }
     }
 
     &::placeholder {
       font-size: 20px;
+      color: grey;
     }
 
-
+    &::-moz-placeholder {
+      font-size: 20px;
+      color: grey;
+    }
   }
 }
 
