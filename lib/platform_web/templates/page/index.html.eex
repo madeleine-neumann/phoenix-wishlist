@@ -6,9 +6,9 @@
     <%= link "", to: Routes.song_path(@conn, :new), class: "btn" %>
     <h2 class="songlist__headline"> Upcoming</h2>
 
-    <ol class="songlist__list">
+    <ol class="songlist__list" data-songlist>
       <%= for song <- @songs do %>
-          <%= render("_song.html", song: song) %>
+        <%= render("_song.html", song: song) %>
       <% end %>
     </ol>
   </div>
